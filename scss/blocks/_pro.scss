@@ -1,0 +1,38 @@
+.pro-section {
+    padding: 75px 0;
+    background-image: url(../../images/pro-section-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%; 
+}
+.pro {
+    @include display($items:center, $space:space-between, $gap:0px);
+}
+.pro__content-wrapper {
+    width: 279px;
+}
+.pro__content-wrapper > h2{
+    @include textStyle($FS:38px, $FW:600, $LH:40px, $CLR:white, $CASE:capitalize, $MB:20px);
+}
+
+.pro__content-wrapper > p{
+    @include textStyle($FS:16px, $FW:400, $LH:19px, $CLR:white, $CASE:capitalize, $MB:0px);
+}
+.pro__list {
+    @include display($items:start, $space:start, $gap:55px);
+
+}
+.count > strong {
+    @include textStyle($FS:50px, $FW:600, $LH:60px, $CLR:white, $CASE:capitalize, $MB:15px);
+}
+.count > p {
+    @include textStyle($FS:16px, $FW:400, $LH:19px, $CLR:white, $CASE:capitalize, $MB:0px);
+}
+.count__img-wrapper {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #D9D9D9;
+    @include display($items:center, $space:center, $gap:0px);
+}

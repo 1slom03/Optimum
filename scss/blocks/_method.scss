@@ -1,0 +1,72 @@
+.methhod-section {
+    padding: 75px 0 144px;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 450px;
+        height: 112px;
+        background-color: rgba(46, 51, 104, 0.15);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+}
+.method__content-wrapper {
+    width: 798px;
+    margin-left: 192px;
+    text-align: center;
+}
+.method__content-wrapper > h2{
+    @include textStyle($FS:38px, $FW:700, $LH:45px, $CLR:$clr-black, $CASE:capitalize, $MB:15px);
+}
+.method__content-wrapper > h2 > span {
+    @include textStyle($FS:38px, $FW:700, $LH:45px, $CLR:$clr-orange, $CASE:capitalize, $MB:15px);
+}
+.method__content-wrapper > p {
+    @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:$clr-black, $CASE:unset, $MB:80px);
+}
+.method__list {
+    display: inline-block;
+}
+.method__item {
+    @include display($items:center, $space:space-between, $gap:24px);
+    margin-bottom: 50px; 
+}
+.method__item-content{
+    width: 545px;
+}
+.method__item-content > h3 {
+    @include textStyle($FS:24px, $FW:600, $LH:29px, $CLR:$clr-black, $CASE:capitalize, $MB:15px);
+}
+.method__item-content > p {
+    @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:rgba(0, 0, 0, 0.68), $CASE:capitalize, $MB:30px);
+}
+.method__item-content > button{
+    @include btnStyle($widh:259px,$pdd:15px,$btnFS:16px,$btnFW:500,$btnLW:16.36px,$btnClr:$clr-black,$btnCase:unset,$btnbg:$clr-white);
+    border: 1px solid $clr-orange;
+    cursor: pointer;
+}
+.method__item-btn-wrapper{
+    position: relative;
+    width: 542px;
+    height: 297px;  
+    background-image: url(../../images/method-section-img2.png);
+    background-repeat: no-repeat;
+    background-size: 542px 297px;
+    background-position: center;
+}
+.method__item-btn-wrapper > button{
+    @include textStyle($FS:16px, $FW:600, $LH:19.36px, $CLR:$clr-white, $CASE:unset, $MB:0px);
+    width: 151px;
+    padding: 16px;
+    background-color: $clr-orange;
+    border: 1px solid $clr-orange;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+
+    
+}

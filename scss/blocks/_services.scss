@@ -1,0 +1,104 @@
+.services-section {
+    padding: 118px 0 173px;
+    background-image: url(../../images/services-section-bg11.png), url(../../images/services-section-bg2.png);
+    background-repeat: no-repeat;
+    background-size: 518.5px 860.5px, 921.5px 860px;
+    background-position: left 8px, calc(50% - -400px) bottom;
+}
+.services__content-wrapper {
+    text-align: center;
+    margin-bottom: 96px;
+}
+.services__content-wrapper > h2 {
+    @include textStyle($FS:38px, $FW:700, $LH:45px, $CLR:#000000AD, $CASE:capitalize, $MB:20px); 
+}
+.services__content-wrapper > p{
+    @include textStyle($FS:16px, $FW:400, $LH:24px, $CLR:#000000AD, $CASE:capitalize, $MB:0px);
+}
+.services__list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 29px;
+    column-gap: 20px;
+}
+.services__item {
+    cursor: pointer;
+    width: 354px;
+    height: 465px;
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0 #000;
+
+    &:hover > .services__img{
+        height: 50%;
+    }
+    &:hover > .services__hidden-content{
+        bottom: 0;
+    }
+}
+.services__img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+.services-subcontent {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+}
+.services__hidden-content{
+    padding: 20px;
+    position: absolute;
+    bottom: -100%;
+    height: 50%;
+    background-color: white;
+    transition: all 0.5s;
+}
+.services__hidden-content > h3{
+    @include textStyle($FS:24px, $FW:700, $LH:29px, $CLR:$clr-black, $CASE:capitalize, $MB:10px);
+}
+.services__hidden-content > p{
+    @include textStyle($FS:14px, $FW:400, $LH:20px, $CLR:$clr-black, $CASE:capitalize, $MB:25px);
+}
+.services__hidden-content > a{
+    @include textStyle($FS:15px, $FW:500, $LH:18px, $CLR:$clr-orange, $CASE:capitalize, $MB:15px);
+    padding-right: 30px;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 3px;
+        bottom: 0;
+        width: 15px;
+        height: 15px;
+        margin: auto 0;
+        background-image: url(../../images/arrow.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+.services-subcontent > h3{
+    @include textStyle($FS:24px, $FW:700, $LH:29px, $CLR:$clr-white, $CASE:capitalize, $MB:15px);
+}
+.services-subcontent > p{
+    @include textStyle($FS:15px, $FW:500, $LH:18px, $CLR:$clr-white, $CASE:capitalize, $MB:0px);
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: "";
+        right: 74px;
+        top: 3px;
+        bottom: 0;
+        width: 15px;
+        height: 15px;
+        margin: auto 0;
+        background-image: url(../../images/arrow-white.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}

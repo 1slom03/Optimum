@@ -1,0 +1,133 @@
+.hero-section{
+    // height: 100vh;
+    padding: 180px 0 93px;
+    background-image: url(../images/hero-img.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+.hero{
+    @include display($items:0, $space:space-between, $gap:85px)    
+}
+.hero__form{
+    border-radius: 10px;
+    width: 449px;
+    padding: 25px;
+    background: #3A3A3A80;
+
+}
+.form__subcontent-title{
+    @include textStyle($FS:30px, $FW:700, $LH:36px, $CLR:white, $CASE:capitalize, $MB:8px);
+    display: inline-block;
+}
+.form__text{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E0E0E0;
+    @include textStyle($FS:16px, $FW:400, $LH:19px, $CLR:white, $CASE:capitalize, $MB:0px);
+}
+.form__label {
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+}
+.form__label--date-icon > .form__input{
+    background-image: url("../../images/data-icon.svg");
+}
+.form__label-content {
+    @include textStyle($FS:15px, $FW:400, $LH:18px, $CLR:white, $CASE:capitalize, $MB:8px);
+}
+.form__input {
+    @include textStyle($FS:16px, $FW:400, $LH:19px, $CLR:black, $CASE:capitalize, $MB:0px);
+    outline: none;
+    border-radius: 12px;
+    border: none;
+    padding: 16px 0 16px 47px;
+    background-image: url(../../images/location-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 24px , 24px;
+    background-position: 14px center;
+
+    &::placeholder{
+        color: #00000061;
+    }
+
+
+}
+.form__radio-wrapper{
+    margin-top: 15px;
+}
+.form__label-box{
+    @include display($items:center, $space:start, $gap:15px);
+}
+.form__radio-label {
+    margin-top: 8px;
+    width: 49%;
+    padding: 15px;
+    background-color: white;
+    border-radius: 12px;
+    @include display($items:center, $space:start, $gap:12px);
+    
+}
+.form__costum-radio {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #D3D3D3;
+}
+.form__costum-radio-inner{
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+}
+.radio-input:checked ~ .form__costum-radio{
+    border-color: $clr-orange;
+}
+.radio-input:checked ~ .form__costum-radio > .form__costum-radio-inner{
+    background-color: $clr-orange;
+    
+}
+.line{
+    margin: 25px 0 20px;
+    border: 1px solid rgba(224, 224, 224, 1)
+}
+.form__btn {
+    width: 399px;
+    padding: 17.5px 0 17.5px;
+    background-color: rgba(255, 125, 68, 1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    @include textStyle($FS:17px, $FW:500, $LH:20.57px, $CLR:$clr-white, $CASE:capitalize, $MB:0px);
+}
+.hero__content-wrapper{
+    padding-top: 45px;
+    width: 576px;
+}
+.hero__top-text{
+    position: relative;
+    @include textStyle($FS:14px, $FW:500, $LH:16px, $CLR:$clr-white, $CASE:capitalize, $MB:11px);
+    padding-left: 34px;
+    
+    &::before{
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        background-image: url(../images/star-icon.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto 0;
+    }
+}
+.hero__title{
+    @include textStyle($FS:56px, $FW:700, $LH:57.76px, $CLR:rgba(255, 255, 255, 0.8), $CASE:capitalize, $MB:20px); 
+}
+.hero__bottom-text{
+    @include textStyle($FS:20px, $FW:400, $LH:24px, $CLR:$clr-white, $CASE:capitalize, $MB:0px);
+
+}
